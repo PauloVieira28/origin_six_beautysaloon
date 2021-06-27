@@ -1,4 +1,4 @@
-/* abre e fecha o menu quando clicar no icone: hamburguer e x */
+/*  abre e fecha o menu quando clicar no icone: hamburguer e x */
 const nav = document.querySelector('#header nav')
 const toggle = document.querySelectorAll('nav .toggle')
 
@@ -17,21 +17,21 @@ for (const link of links) {
   })
 }
 
-/* mudar o header da pagina quando der scroll */
+/* mudar o header da página quando der scroll */
 const header = document.querySelector('#header')
 const navHeight = header.offsetHeight
 
 function changeHeaderWhenScroll() {
   if (window.scrollY >= navHeight) {
-    //scrol é maior que a altura do hearder
+    // scroll é maior que a altura do header
     header.classList.add('scroll')
   } else {
-    //menor que a altura do header
+    // menor que a altura do header
     header.classList.remove('scroll')
   }
 }
 
-/*TESTEMONIALS CAROUSEL SLIDER SWIPER*/
+/* Testimonials carousel slider swiper */
 const swiper = new Swiper('.swiper-container', {
   slidesPerView: 1,
   pagination: {
@@ -47,9 +47,9 @@ const swiper = new Swiper('.swiper-container', {
   }
 })
 
-/*ScrollReveal: Mostrar elementos quando der scroll na página*/
+/* ScrollReveal: Mostrar elementos quando der scroll na página */
 const scrollReveal = ScrollReveal({
-  orogin: 'top',
+  origin: 'top',
   distance: '30px',
   duration: 700,
   reset: true
@@ -62,11 +62,11 @@ scrollReveal.reveal(
   #testimonials header, #testimonials .testimonials
   #contact .text, #contact .links,
   footer .brand, footer .social
-`,
+  `,
   { interval: 100 }
 )
 
-/* Botão voltar para o topo*/
+/* Botão voltar para o topo */
 const backToTopButton = document.querySelector('.back-to-top')
 
 function backToTop() {
@@ -77,10 +77,10 @@ function backToTop() {
   }
 }
 
-/*menu ativo conforme a seção visivel na página*/
+/* Menu ativo conforme a seção visível na página */
 const sections = document.querySelectorAll('main section[id]')
 function activateMenuAtCurrentSection() {
-  const checkpoint = windoow.pageYOffset + (window.innerHeight / 8) * 4
+  const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
 
   for (const section of sections) {
     const sectionTop = section.offsetTop
@@ -102,11 +102,9 @@ function activateMenuAtCurrentSection() {
   }
 }
 
-/* When scroll */
+/* When Scroll */
 window.addEventListener('scroll', function () {
   changeHeaderWhenScroll()
   backToTop()
   activateMenuAtCurrentSection()
 })
-
-/*menu ativo conforme a seção visivel na página*/
