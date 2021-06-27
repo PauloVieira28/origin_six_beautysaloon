@@ -257,12 +257,6 @@ nav.show div.icon-close {
   top: 1.5rem;
 }
 
-nav.show .icon-close {
-  visibility: visible;
-  opacity: 1;
-  top: 1.5rem;
-}
-
 /*====  HOME ============================ */
 #home {
   overflow: hidden;
