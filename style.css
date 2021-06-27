@@ -23,7 +23,7 @@ img {
   --header-height: 4.5rem;
 
   /* colors */
-  --hue: 340;
+  --hue: 159;
   /* HSL color mode */
   --base-color: hsl(var(--hue) 36% 57%);
   --base-color-second: hsl(var(--hue) 65% 88%);
@@ -42,7 +42,6 @@ img {
 }
 
 /*====  BASE ============================ */
-
 html {
   scroll-behavior: smooth;
 }
@@ -139,20 +138,10 @@ body {
 }
 
 #header.scroll {
-  background: var(--base-color);
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
 }
 
-#header.scroll .logo span {
-  color: #ffffff;
-}
-
-#header.scroll .icon-menu {
-  color: #ffffff;
-}
-
 /*====  Logo ============================ */
-
 .logo {
   font: 700 1.31rem var(--title-font);
   color: var(--title-color);
@@ -167,7 +156,6 @@ body {
 }
 
 /*====  NAVIGATIONS ============================ */
-
 nav {
   height: var(--header-height);
   display: flex;
@@ -390,7 +378,7 @@ nav.show .icon-close {
   background: white;
 }
 
-#testimonials {
+#testimonials .container {
   margin-left: 0;
   margin-right: 0;
 }
@@ -442,6 +430,11 @@ nav.show .icon-close {
   padding: 4rem 1rem;
 }
 
+.swiper-pagination-bullet {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
 .swiper-pagination-bullet-active {
   background: var(--base-color);
 }
@@ -480,17 +473,17 @@ footer {
 }
 
 footer.section {
-  padding: 3rem 0;
+  padding: 4rem 0;
 }
 
 footer .logo {
   display: inline-block;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 footer .brand p {
   color: var(--text-color-light);
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 footer i {
@@ -498,18 +491,18 @@ footer i {
   color: var(--text-color-light);
 }
 
-footer .social a {
-  transition: 0.1s;
-  display: inline-block;
-}
-
 footer .social {
   grid-auto-flow: column;
   width: fit-content;
 }
 
+footer .social a {
+  transition: 0.1s;
+  display: inline-block;
+}
+
 footer .social a:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
 }
 
 /*==== Back-to-top ============================ */
@@ -530,7 +523,7 @@ footer .social a:hover {
   visibility: hidden;
   opacity: 0;
 
-  transition: 0.2s;
+  transition: 0.3s;
   transform: translateY(100%);
 }
 
@@ -548,6 +541,7 @@ footer .social a:hover {
     margin-left: auto;
     margin-right: auto;
   }
+
   .section {
     padding: 10rem 0;
   }
@@ -564,6 +558,7 @@ footer .social a:hover {
     height: 3.125rem;
   }
 
+  /*navigation*/
   nav .menu {
     opacity: 1;
     visibility: visible;
@@ -591,7 +586,7 @@ footer .social a:hover {
 
   /* layot*/
   main {
-    margin-top: calc(var(--header-height) + 2rem);
+    margin-top: var(--header-height);
   }
 
   /* home*/
@@ -608,6 +603,7 @@ footer .social a:hover {
   #home .text {
     order: 0;
     max-width: 24rem;
+    text-align: left;
   }
 
   /* about*/
